@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>868.gg</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="868.gg">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html,body{margin:0;height:100%;}
+body{
+  background:url(bg.jpg) center/cover no-repeat;
+  font-family:-apple-system,BlinkMacSystemFont;
+}
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+.box{
+  background:rgba(0,0,0,.45);
+  padding:24px 28px;
+  border-radius:16px;
+}
+.box b{color:#ffd966;}
+</style>
+</head>
+<body>
+<div class="overlay" id="guide">
+  <div class="box">
+    📱 <b>添加 868.gg 到主屏幕</b><br><br>
+    1️⃣ 点击 Safari 底部 <b>分享</b><br>
+    2️⃣ 选择 <b>添加到主屏幕</b>
+  </div>
+</div>
+<script>
+if (window.navigator.standalone) {
+  location.href="https://868.gg";
+}
+</script>
+</body>
+</html>
