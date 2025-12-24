@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <title>868.gg</title>
 
-  <!-- iOS Web Clip 核心 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="868.gg">
 
   <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -19,31 +17,40 @@
       font-family: -apple-system, BlinkMacSystemFont;
       background: #000;
       color: #fff;
-    }
-    .guide {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.9);
-      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
-      font-size: 15px;
-      z-index: 9999;
     }
-    .guide b {
+    .box {
+      padding: 20px;
+    }
+    .box b {
       color: #00ffcc;
     }
   </style>
 </head>
 <body>
 
-<div class="guide" id="guide">
-  📱 <b>添加 868.gg 到主屏幕</b><br>
+<div class="box" id="guide">
+  📱 <b>添加 868.gg 到主屏幕</b><br><br>
   1️⃣ 点击 Safari 底部 <b>分享</b><br>
-  2️⃣ 选择 <b>添加到主屏幕</b>
+  2️⃣ 选择 <b>添加到主屏幕</b><br><br>
+  ⏱ 添加完成后<br>从桌面打开即可进入
 </div>
 
+<script>
+  const isStandalone = window.navigator.standalone === true;
+
+  // 如果是从主屏幕打开，直接进官网
+  if (isStandalone) {
+    window.location.href = "https://868.gg";
+  }
+</script>
+
+</body>
+</html>
 <script>
   // 判断是否 iOS Safari
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
